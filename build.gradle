@@ -1,0 +1,45 @@
+plugins {
+    id 'com.gradle.plugin-publish' version '0.9.3'
+}
+
+apply plugin: 'groovy'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile gradleApi()
+    compile 'org.codehaus.groovy:groovy:2.4.5'
+    compile 'com.android.tools.build:gradle:1.5.0'
+    testCompile 'junit:junit:4.12'
+}
+
+group = GROUP
+version = VERSION_NAME
+
+pluginBundle {
+    website = POM_URL
+    vcsUrl = POM_SCM_URL
+    description = POM_DESCRIPTION
+    tags = ['aosp', 'android', 'aapt']
+
+    plugins {
+        aospAaptPlugin {
+            id = 'pl.droidsonroids.aosp.aapt'
+            displayName = POM_NAME
+            description = POM_DESCRIPTION
+        }
+    }
+}
+
+test {
+    environment 'PLATFORM_SDK_VERSION', '15'
+    environment 'PRODUCT_AAPT_PREF_CONFIG', 'xhdpi'
+    environment 'GRADLE_AAPT_INCLUDED_CONFIGURATIONS', 'sw600dp,land'
+    environment 'PRODUCT_LOCALES', 'en_US,pl,es_ES'
+
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
