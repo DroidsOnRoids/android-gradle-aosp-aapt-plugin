@@ -15,7 +15,7 @@ Supported variables:
 
 `GRADLE_AAPT_INCLUDED_CONFIGURATIONS` is additional variable which can contain comma separated configurations eg: `sw600dp,land`.
 
-Gradle-based AOSP modules are needed. See (https://github.com/DroidsOnRoids/android-gradle-aosp-aapt-plugin/issues/1#issuecomment-205082352)[Android.mk examples].
+Gradle-based AOSP modules are needed. See [Android.mk examples](https://github.com/DroidsOnRoids/android-gradle-aosp-aapt-plugin/issues/1#issuecomment-205082352).
 
 ## License
 
