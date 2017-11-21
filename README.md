@@ -13,7 +13,7 @@ Supported variables:
 | PRODUCT_LOCALES | -c |
 | GRADLE_AAPT_INCLUDED_CONFIGURATIONS | -c |
 
-`GRADLE_AAPT_INCLUDED_CONFIGURATIONS` is additional variable which can contain comma separated configurations eg: `sw600dp,land`.
+`GRADLE_AAPT_INCLUDED_CONFIGURATIONS` is additional variable which can contain comma separated configurations e.g.: `sw600dp,land`.
 
 ## Usage
 
